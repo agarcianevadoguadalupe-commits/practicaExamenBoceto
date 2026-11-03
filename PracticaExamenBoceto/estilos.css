@@ -1,0 +1,336 @@
+/* GENERAL */
+/* Los width y height son del contenido (content-box).
+   Ancho total = width + padding + borde (se indica en cada comentario) */
+
+body {
+    width: 1160px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+    background-color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #0066CC;
+}
+
+h1, h2, p, ul, li {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* HEADER */
+/* font-size: 0px en el contenedor elimina el hueco que deja el
+   espacio en blanco entre elementos inline-block */
+
+header {
+    width: 1120px;
+    height: 80px;
+    padding: 20px 20px 20px 20px;
+    background-color: #205A82;
+    color: #FFFFFF;
+    font-size: 0px;
+}
+
+/* Caja de texto: primer div del header */
+header > div:first-child {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 80px;
+    font-size: 16px;
+}
+
+header > div:first-child h1 {
+    margin: 0px 0px 5px 0px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+header > div:first-child p {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+/* Caja de imagen: último div del header */
+header > div:last-child {
+    display: inline-block;
+    vertical-align: top;
+    width: 170px;
+    height: 80px;
+    margin-left: 650px;
+}
+
+header img {
+    display: block;
+    width: 170px;
+    height: 80px;
+}
+
+/* NAV */
+
+nav {
+    width: 1120px;
+    height: 40px;
+    padding: 10px 20px 10px 20px;
+    background-color: #58B0E0;
+    font-size: 0px;
+}
+
+nav a {
+    display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    height: 30px;
+    padding: 10px 0px 0px 0px;
+    margin-right: 100px;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Botón activo: el primero ("Inicio") */
+nav a:first-child {
+    background-color: #07579B;
+}
+
+/* Último botón: sin margen derecho */
+nav a:last-child {
+    margin-right: 0px;
+}
+
+/* SECTION PRINCIPAL (primera section) */
+
+section:first-of-type {
+    width: 1120px;
+    height: 310px;
+    padding: 20px 20px 20px 20px;
+    background-color: #E6F2FA;
+    font-size: 0px;
+}
+
+section:first-of-type img {
+    display: inline-block;
+    vertical-align: top;
+    width: 560px;
+    height: 310px;
+}
+
+/* ancho: 498 + 20 + 20 + 1 + 1 = 540 | alto: 298 + 5 + 5 + 1 + 1 = 310 */
+section:first-of-type div {
+    display: inline-block;
+    vertical-align: top;
+    width: 498px;
+    height: 298px;
+    padding: 5px 20px 5px 20px;
+    margin-left: 20px;
+    border: 1px solid #8AD8F5;
+    background-color: #E6F2FA;
+    color: #0066CC;
+    font-size: 16px;
+}
+
+section:first-of-type h2 {
+    margin: 0px 0px 10px 0px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BEB;
+}
+
+section:first-of-type p {
+    font-size: 18px;
+    color: #0066CC;
+}
+
+/* SECTION INFERIOR (última section) */
+/* ancho: 1140 + 20 + 0 = 1160 | alto: 747 + 15 + 15 = 777 */
+
+section:last-of-type {
+    width: 1140px;
+    height: 747px;
+    padding: 15px 0px 15px 20px;
+    background-color: #F0FBF7;
+    font-size: 0px;
+}
+
+/* Caja del formulario: primer div de la section inferior */
+/* ancho: 428 + 20 + 20 + 1 + 1 = 470 */
+section:last-of-type > div:first-child {
+    display: inline-block;
+    vertical-align: top;
+    width: 428px;
+    padding: 20px 20px 20px 20px;
+    margin-right: 20px;
+    border: 1px solid #8AD8F5;
+    background-color: #F8FAFF;
+}
+
+section:last-of-type > div:first-child > h2 {
+    margin: 0px 0px 20px 0px;
+    padding: 10px 10px 10px 10px;
+    background-color: #D6F0FC;
+    color: #007BEB;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin: 0px 0px 5px 0px;
+    color: #0066CC;
+    font-size: 14px;
+}
+
+/* select: 400 + 10 + 10 + 1 + 1 = 422 | alto: 58 + 1 + 1 = 60 */
+select {
+    display: block;
+    width: 400px;
+    height: 58px;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 0px 30px 0px;
+    border: 1px solid #8AD8F5;
+    background-color: #F8FAFF;
+    color: #0066CC;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* fecha 220 + separación 50 + personas 142 */
+/* Campo fecha: primer div dentro del div que envuelve fecha y personas */
+form > div > div:first-child {
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;
+    margin-right: 50px;
+}
+
+/* Campo personas: último div */
+form > div > div:last-child {
+    display: inline-block;
+    vertical-align: top;
+    width: 142px;
+}
+
+/* fecha: 198 + 10 + 10 + 1 + 1 = 220 */
+#fecha {
+    display: block;
+    width: 198px;
+    height: 58px;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 0px 16px 0px;
+    border: 1px solid #8AD8F5;
+    background-color: #F8FAFF;
+    color: #0066CC;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* personas: 120 + 10 + 10 + 1 + 1 = 142 */
+#personas {
+    display: block;
+    width: 120px;
+    height: 58px;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 0px 16px 0px;
+    border: 1px solid #8AD8F5;
+    background-color: #F8FAFF;
+    color: #0066CC;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* textarea: 400 + 10 + 10 + 1 + 1 = 422 */
+textarea {
+    display: block;
+    width: 400px;
+    height: 58px;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 0px 16px 0px;
+    border: 1px solid #8AD8F5;
+    background-color: #F8FAFF;
+    color: #0066CC;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: none;
+}
+
+/* botón: 420 + 1 + 1 = 422 | alto: 58 + 1 + 1 = 60 */
+button {
+    display: block;
+    width: 420px;
+    height: 58px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 16px 0px;
+    border: 1px solid #28A745;
+    background-color: #28A745;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Bloque secundario: último div de la section inferior */
+/* ancho: 470 + 15 + 15 = 500 | alto: 747 + 15 + 15 = 777 */
+section:last-of-type > div:last-child {
+    display: inline-block;
+    vertical-align: top;
+    width: 470px;
+    padding: 15px 15px 15px 15px;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+section:last-of-type img {
+    display: block;
+    width: 470px;
+    height: 411px;
+}
+
+/* Lista de ventajas: div dentro del bloque secundario */
+/* ancho: 420 + 25 + 25 = 470 | alto: 261 + 25 + 25 = 311 */
+section:last-of-type > div:last-child > div {
+    width: 420px;
+    height: 261px;
+    padding: 25px 25px 25px 25px;
+    margin: 25px 0px 0px 0px;
+    background-color: #E0FBE7;
+    color: #0066CC;
+}
+
+section:last-of-type > div:last-child > div h2 {
+    margin: 0px 0px 10px 0px;
+    color: #007BEB;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+section:last-of-type ul {
+    padding: 0px 0px 0px 20px;
+}
+
+section:last-of-type li {
+    margin: 0px 0px 8px 0px;
+    color: #0066CC;
+}
+
+/* FOOTER */
+/* ancho: 1120 + 20 + 20 = 1160 | alto: 40 + 20 + 20 = 80 */
+
+footer {
+    width: 1120px;
+    height: 40px;
+    padding: 20px 20px 20px 20px;
+    background-color: #1B4F72;
+    color: #FFFFFF;
+}
+
+footer p {
+    color: #FFFFFF;
+    line-height: 40px;
+    text-align: center;
+}
